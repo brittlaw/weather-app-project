@@ -1,0 +1,46 @@
+body {
+  margin: 0 auto;
+  padding: 40px 75px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+h1 {
+  padding: 20px 0px 0px 0px;
+  font-family: "Poppins", sans-serif;
+}
+h2 {
+  font-family: "Poppins", sans-serif;
+}
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+}
+.sunicon {
+  font-size: 45px;
+}
+.currenttemp {
+  font-size: 35px;
+  padding: 10px 25px;
+}
+ul {
+  list-style: none;
+  position: relative;
+  left: 300px;
+  top: -75px;
+}
+.weather-app {
+  border: 1px solid black;
+  border-radius: 15px;
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/073/343/original/s.jpeg?1679610033");
+  background-size: cover;
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+#search-form,
+span {
+  display: inline;
+}
+#current-location-button {
+  border-radius: 25px;
+}
