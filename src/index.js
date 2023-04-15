@@ -27,8 +27,11 @@ h2.innerHTML = `${day} ${hours}:${minutes}`;
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.city;
   document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.temperature.current
-  );
+    response.data.temperature.current);
+    let iconElement = document.querySelector("#mainicon");
+    iconElement.setAttribute("src", response.data.condition.icon_url);
+    iconElement.setAttribute("alt", response.data.condition.description);
+
 
   document.querySelector("#humidity").innerHTML =
     response.data.temperature.humidity;
