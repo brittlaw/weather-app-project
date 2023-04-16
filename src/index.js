@@ -104,3 +104,5 @@ let farn = document.querySelector(`#fa`);
 farn.addEventListener("click", convert);
 let celcius = document.querySelector(`#celsiusLink`);
 celcius.addEventListener("click", celsiusconvert);
+
+searchCity("New Orleans");
