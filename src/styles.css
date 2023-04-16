@@ -20,11 +20,11 @@ h3 {
 }
 .currenttemp {
   font-size: 40px;
-  padding: 5px 10px;
-  line-height: 1;
+  line-height: 3;
 }
 .units {
   font-size: 14px;
+   line-height: 4;
 }
 ul {
   list-style: none;
