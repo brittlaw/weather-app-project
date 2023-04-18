@@ -95,9 +95,7 @@ function convert(event) {
 function celsiusconvert(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector(`#temperature`);
-  let temperature = temperatureElement.innerHTML;
-  temperature = Number(temperature);
-  temperatureElement.innerHTML = Math.round((temperature * 32) / 5 + 9);
+  temperatureElement.innerHTML = celsiusTemperature;
 }
 
 let farn = document.querySelector(`#fa`);
