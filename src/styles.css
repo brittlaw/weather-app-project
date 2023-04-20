@@ -48,6 +48,10 @@ span {
 #current-location-button {
   border-radius: 25px;
 }
+.weather-forecast {
+   padding: 5px;
+   text-align: center;
+}
 footer {
   text-align: center;
 }
