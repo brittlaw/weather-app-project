@@ -28,9 +28,7 @@ h3 {
 }
 ul {
   list-style: none;
-  position: relative;
-  left: 300px;
-  top: -75px;
+  font-size: 15px;
 }
 .weather-app {
   border: 1px solid black;
@@ -51,7 +49,9 @@ span {
 .weather-forecast {
    padding: 5px;
    text-align: center;
+   font-size: 14px;
 }
 footer {
   text-align: center;
+  font-size: 14px;
 }
