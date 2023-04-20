@@ -23,15 +23,15 @@ let days = [
 let day = days[now.getDay()];
 
 h2.innerHTML = `${day} ${hours}:${minutes}`;
-
 function displayWeatherCondition(response) {
+  celsiusTemperature = Math.round(response.data.temperature.current);
   document.querySelector("#city").innerHTML = response.data.city;
   document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.temperature.current);
-    let iconElement = document.querySelector("#mainicon");
-    iconElement.setAttribute("src", response.data.condition.icon_url);
-    iconElement.setAttribute("alt", response.data.condition.description);
-
+    response.data.temperature.current
+  );
+  let iconElement = document.querySelector("#mainicon");
+  iconElement.setAttribute("src", response.data.condition.icon_url);
+  iconElement.setAttribute("alt", response.data.condition.description);
 
   document.querySelector("#humidity").innerHTML =
     response.data.temperature.humidity;
@@ -123,4 +123,38 @@ let celsiusTemperature = null;
 let fahrenheitLink = document.querySelector("#fa");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
+//forecast
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Fri", "Sat", "Sun", "Mon", "Tue", "Wed"];
+
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col-2">
+        <div class="weather-forecast-date">${day}</div>
+        <img
+          src="http://openweathermap.org/img/wn/50d@2x.png"
+          alt=""
+          width="42"
+        />
+        <div class="weather-forecast-temperatures">
+          <span class="weather-forecast-temperature-max"> 18° </span>
+          <span class="weather-forecast-temperature-min"> 12° </span>
+        </div>
+      </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+
+  console.log(forecastHTML);
+}
+
 searchCity("New Orleans");
+displayForecast();

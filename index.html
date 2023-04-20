@@ -33,7 +33,7 @@
                 <div class="container text-center">
                 </div>
                 <form id="search-form">
-                    <input type="text" id="city-input" autocomplete="off" placeholder="Enter a city!">
+                    <input type="text" id="city-input" placeholder="Enter a city!">
                     <input type="submit" value="Search" />
                 </form> <span>
                     <button id="current-location-button">
@@ -41,49 +41,30 @@
                     </button>
                 </span>
                 <h1 id="city"> New Orleans
-             </h1>
+                </h1>
                 <h2>
                     Monday
                 </h2>
                 <div class="d-flex weather-temperature">
-                <img id="mainicon" />
-                <span class="currenttemp" id="temperature">15</span>
-                <span class="units"><a href="#" id="celsiusLink">°C</a> | <a href="#" id="fa">°F</a></span>
+                    <img id="mainicon" />
+                    <span class="currenttemp" id="temperature">15</span>
+                    <span class="units"><a href="#" id="celsiusLink">°C</a> | <a href="#" id="fa">°F</a></span>
                 </div>
                 <ul>
                     <li id="description"></li>
                     <li>Humidity: <span id="humidity"></span>%</li>
                     <li>Wind: <span id="wind"></span> km/h</li>
                 </ul>
-                <div class="row">
-                    <div class="col-md-2">Monday</div>
-                    <div class="col-md-2">Tuesday</div>
-                    <div class="col-md-2">Wednesday</div>
-                    <div class="col-md-2">Thursday</div>
-                    <div class="col-md-2">Friday</div>
-                </div>
-                <div class="row">
-                    <div class="col-md-2"><i class="fa-solid fa-cloud-bolt"></i></div>
-                    <div class="col-md-2"><i class="fa-solid fa-sun"></i></div>
-                    <div class="col-md-2"><i class="fa-solid fa-cloud"></i></div>
-                    <div class="col-md-2"><i class="fa-solid fa-wind"></i></div>
-                    <div class="col-md-2"><i class="fa-solid fa-sun"></i></div>
-                </div>
-                <div class="row">
-                    <div class="col-md-2">57°</div>
-                    <div class="col-md-2">65°</div>
-                    <div class="col-md-2">58°</div>
-                    <div class="col-md-2">53°</div>
-                    <div class="col-md-2">67°</div>
+                <div class="weather-forecast" id="forecast">
                 </div>
             </div>
-        </div>
-        <footer>
-            This project was coded by <a href="https://www.shecodes.io/graduates/65609-brittany-lawhead" target="_blank">Brittany Lawhead</a> 🧡
-        </br>
-        <a href="https://github.com/brittlaw/weather-app-project" target="_blank">Open-source code</a> 👩🏻‍💻
-        </footer>
-        <script src="src/index.js"></script>
+            <footer>
+                This project was coded by <a href="https://www.shecodes.io/graduates/65609-brittany-lawhead"
+                    target="_blank">Brittany Lawhead</a> 🧡
+                </br>
+                <a href="https://github.com/brittlaw/weather-app-project" target="_blank">Open-source code</a> 👩🏻‍💻
+            </footer>
+            <script src="src/index.js"></script>
     </body>
 
 </html>
