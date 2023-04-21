@@ -123,7 +123,6 @@ let celsiusTemperature = null;
 let fahrenheitLink = document.querySelector("#fa");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
-//forecast
 
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");

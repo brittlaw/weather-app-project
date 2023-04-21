@@ -38,6 +38,7 @@ ul {
   padding: 25px;
   margin: 20px auto;
   max-width: 600px;
+  width: fit-content;
 }
 #search-form,
 span {
