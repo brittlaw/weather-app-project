@@ -159,6 +159,7 @@ function displayForecast(response) {
           <span class="weather-forecast-temperature-min"> ${Math.round(
             forecastDay.temperature.minimum
           )}°C </span>
+        </div>
       </div>
   `;
     }
@@ -167,5 +168,4 @@ function displayForecast(response) {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
-
 searchCity("New Orleans");
