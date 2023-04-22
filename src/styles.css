@@ -48,9 +48,8 @@ span {
   border-radius: 25px;
 }
 .weather-forecast {
-   padding: 5px;
+   padding: 5px 5px;
    text-align: center;
-   font-size: 14px;
 }
 footer {
   text-align: center;
