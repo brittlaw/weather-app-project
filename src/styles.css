@@ -31,14 +31,14 @@ ul {
   font-size: 15px;
 }
 .weather-app {
+  justify-content: center;
   border: 1px solid black;
   border-radius: 15px;
   background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/073/343/original/s.jpeg?1679610033");
   background-size: cover;
   padding: 25px;
   margin: 20px auto;
-  max-width: 600px;
-  width: fit-content;
+  max-width: 400px;
 }
 #search-form,
 span {
@@ -48,7 +48,11 @@ span {
   border-radius: 25px;
 }
 .weather-forecast {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
   text-align: center;
+  width: fit-content;
+  margin: 0;
 }
 .weather-forecast-temperatures {
   font-size: 14px;
