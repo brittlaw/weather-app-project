@@ -58,8 +58,8 @@ span {
 .weather-forecast-temperature-min {
   opacity: 0.6;
 }
-img {
-  padding: 5px;
+.icon {
+justify-content: space-between;
 }
 footer {
   text-align: center;
