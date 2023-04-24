@@ -53,6 +53,7 @@ span {
 }
 .weather-forecast-temperatures {
   font-size: 14px;
+  margin: 10px auto;
 }
 .weather-forecast-temperature-min {
   opacity: 0.6;
