@@ -58,7 +58,7 @@ span {
   opacity: 0.6;
 }
 .icon {
-display: flex;
+display: grid;
 justify-content: space-between;
  padding: 0px 5px;
 }
