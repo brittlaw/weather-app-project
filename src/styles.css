@@ -57,11 +57,6 @@ span {
 .weather-forecast-temperature-min {
   opacity: 0.6;
 }
-.icon {
-display: grid;
-justify-content: space-between;
- padding: 0px 5px;
-}
 footer {
   text-align: center;
   font-size: 14px;
