@@ -59,6 +59,7 @@ span {
   opacity: 0.6;
 }
 .icon {
+display: flex;
 justify-content: space-between;
 }
 footer {
