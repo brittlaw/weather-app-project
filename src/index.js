@@ -24,7 +24,6 @@ let day = days[now.getDay()];
 
 h2.innerHTML = `${day} ${hours}:${minutes}`;
 function displayWeatherCondition(response) {
-  celsiusTemperature = Math.round(response.data.temperature.current);
   document.querySelector("#city").innerHTML = response.data.city;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.temperature.current
@@ -45,7 +44,7 @@ function displayWeatherCondition(response) {
 
 function searchCity(city) {
   let apiKey = "f4d2b50f3ot7abdfe57aa26d093c0005";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
@@ -57,13 +56,13 @@ function handleSubmit(event) {
 
 function searchLocation(position) {
   let apiKey = "f4d2b50f3ot7abdfe57aa26d093c0005";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${position.coords.longitude}&lat=${position.coords.latitude}&key=${apiKey}&units=metric`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${position.coords.longitude}&lat=${position.coords.latitude}&key=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
 function getForecast(coordinates) {
   let apiKey = "f4d2b50f3ot7abdfe57aa26d093c0005";
-  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=metric`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(displayForecast);
 }
 
@@ -90,46 +89,6 @@ searchForm.addEventListener("submit", handleSubmit);
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-//C & F converter
-
-function convert(event) {
-  let temperatureElement = document.querySelector(`#temperature`);
-  let temperature = temperatureElement.innerHTML;
-  temperature = Number(temperature);
-  temperatureElement.innerHTML = Math.round((temperature * 9) / 5 + 32);
-}
-
-function celsiusconvert(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector(`#temperature`);
-  temperatureElement.innerHTML = celsiusTemperature;
-}
-
-let farn = document.querySelector(`#fa`);
-farn.addEventListener("click", convert);
-let celcius = document.querySelector(`#celsiusLink`);
-celcius.addEventListener("click", celsiusconvert);
-
-function displayFahrenheitTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  let fahrenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
-}
-
-function displayCelsiusTemperature(event) {
-  event.preventDefault();
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-let celsiusTemperature = null;
-
-let fahrenheitLink = document.querySelector("#fa");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
-
 // forecast
 function displayForecast(response) {
   let forecast = response.data.daily;
@@ -155,10 +114,10 @@ function displayForecast(response) {
         <div class="weather-forecast-temperatures">
           <span class="weather-forecast-temperature-max"> ${Math.round(
             forecastDay.temperature.maximum
-          )}°C </span>
+          )}° </span> <br>
           <span class="weather-forecast-temperature-min"> ${Math.round(
             forecastDay.temperature.minimum
-          )}°C </span>
+          )}° </span>
         </div>
       </div>
   `;

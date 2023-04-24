@@ -24,7 +24,7 @@ h3 {
 }
 .units {
   font-size: 14px;
-   line-height: 4;
+  line-height: 5;
 }
 ul {
   list-style: none;
@@ -48,8 +48,14 @@ span {
   border-radius: 25px;
 }
 .weather-forecast {
-   padding: 5px 5px;
-   text-align: center;
+  padding: 5px 5px;
+  text-align: center;
+}
+.weather-forecast-temperatures {
+  font-size: 14px;
+}
+.weather-forecast-temperature-min {
+  opacity: 0.6;
 }
 footer {
   text-align: center;
