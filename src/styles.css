@@ -66,12 +66,3 @@ footer {
   text-align: center;
   font-size: 14px;
 }
-@media only screen and (max-width: 600px) {
-  .weather-forecast {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-}
